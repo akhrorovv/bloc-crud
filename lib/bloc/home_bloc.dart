@@ -17,8 +17,7 @@ class HomeBloc extends Bloc<HomeEvent, HomeState> {
     on<DeletePostEvent>(_onDeletePostEvent);
   }
 
-  Future<void> _onDeletePostEvent(
-      DeletePostEvent event, Emitter<HomeState> emit) async {
+  Future<void> _onDeletePostEvent(DeletePostEvent event, Emitter<HomeState> emit) async {
     emit(HomeLoadingState());
 
     var response = await Network.DEL(
