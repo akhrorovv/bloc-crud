@@ -42,7 +42,7 @@ class _HomePageState extends State<HomePage> {
       appBar: AppBar(
         centerTitle: true,
         backgroundColor: Colors.blue,
-        title: const Text("Bloc"),
+        title: const Text("Bloc - Bloc"),
       ),
       body: BlocBuilder<HomeBloc, HomeState>(
         builder: (context, state) {

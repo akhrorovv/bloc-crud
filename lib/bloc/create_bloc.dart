@@ -1,6 +1,5 @@
 import 'package:bloc/bloc.dart';
 import 'package:flutter/material.dart';
-
 import '../models/post_model.dart';
 import '../services/http_service.dart';
 import 'create_event.dart';
@@ -30,19 +29,4 @@ class CreateBloc extends Bloc<CreateEvent, CreateState> {
     }
   }
 
-// Stream<CreateState> mapEventToState(CreateEvent event) async* {
-//   if (event is CreatePostEvent) {
-//     yield CreateLoadingState();
-//
-//     try {
-//       var response = await Network.POST(
-//           Network.API_POST_CREATE, Network.paramsCreate(event.title, event.body));
-//       LogService.d(response!);
-//       PostRes postRes = Network.parsePostRes(response);
-//       yield CreateSuccessState('Post created successfully');
-//     } catch (e) {
-//       yield CreateErrorState('Error creating post: $e');
-//     }
-//   }
-// }
 }
