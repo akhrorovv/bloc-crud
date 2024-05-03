@@ -24,7 +24,7 @@ class CreateBloc extends Bloc<CreateEvent, CreateState> {
 
     var response = await Network.POST(Network.API_POST_CREATE, Network.paramsCreate(post));
     if(response != null){
-      emit(CreateSuccessState(''));
+      emit(CreatedPostState(post));
     } else {
       emit(CreateErrorState('Could not delete post'));
     }

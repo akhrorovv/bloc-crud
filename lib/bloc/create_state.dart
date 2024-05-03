@@ -1,4 +1,5 @@
 import 'package:equatable/equatable.dart';
+import 'package:ngdemo13/models/post_model.dart';
 
 abstract class CreateState extends Equatable {
   const CreateState();
@@ -11,13 +12,13 @@ class CreateInitialState extends CreateState {}
 
 class CreateLoadingState extends CreateState {}
 
-class CreateSuccessState extends CreateState {
-  final String message;
+class CreatedPostState extends CreateState {
+  final Post post;
 
-  const CreateSuccessState(this.message);
+  const CreatedPostState(this.post);
 
   @override
-  List<Object?> get props => [message];
+  List<Object?> get props => [post];
 }
 
 class CreateErrorState extends CreateState {
